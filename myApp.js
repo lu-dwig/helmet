@@ -17,9 +17,9 @@ app.use(helmet.noSniff())
 // Add your Content Security Policy "Prevent IE from Opening Untrusted HTML" here
 app.use(helmet.ieNoOpen())
 
-
-
-
+// Add your https strict mode here
+const timeInSeconds = 90 * 24 * 60 * 60;
+app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 
 
 
