@@ -14,12 +14,8 @@ app.use(helmet.xssFilter())
 // Add your MIME sniffing protection here
 app.use(helmet.noSniff())
 
-
-
-
-
-
-
+// Add your Content Security Policy "Prevent IE from Opening Untrusted HTML" here
+app.use(helmet.ieNoOpen())
 
 
 
