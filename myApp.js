@@ -11,9 +11,8 @@ app.use(helmet.frameguard({action: 'deny'}))
 // Add your X-XSS-Protection here 
 app.use(helmet.xssFilter())
 
-
-
-
+// Add your MIME sniffing protection here
+app.use(helmet.noSniff())
 
 
 
