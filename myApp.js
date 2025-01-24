@@ -5,7 +5,8 @@ const app = express();
 // Add your middleware here
 app.use(helmet.hidePoweredBy());
 
-
+// Add your Frameguard here
+app.use(helmet.frameguard({action: 'deny'}))
 
 
 
