@@ -8,9 +8,8 @@ app.use(helmet.hidePoweredBy());
 // Add your Frameguard here
 app.use(helmet.frameguard({action: 'deny'}))
 
-
-
-
+// Add your X-XSS-Protection here 
+app.use(helmet.xssFilter)
 
 
 
