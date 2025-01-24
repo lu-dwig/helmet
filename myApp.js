@@ -39,18 +39,16 @@ app.use(helmet.contentSecurityPolicy({
   }
 }));
 
-
-
-
-
-
-
-
-
-
-
-
-
+// Add your parent helmet midldleware Policy here
+app.use(helmet({
+  contentSecurityPolicy: {    // enable and configure
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", 'trusted-cdn.com'],
+    }
+  },
+  noCache: true     // disable
+}))
 
 
 
