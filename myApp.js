@@ -27,8 +27,17 @@ app.use(helmet.dnsPrefetchControl());
 // Add your client Side Cache Disable Policy here
 app.use(helmet.noCache());
 
-
-
+// Add your Content Security Policy here
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'", "'trusted-cdn.com'"],
+    // styleSrc: ["'self'", "'unsafe-inline'"],
+    // imgSrc: ["'self'", "data:"],
+    // connectSrc: ["'self'", "https://api.example.com"],
+    // fontSrc: ["'self'", "https://fonts.gstatic.com"]
+  }
+}));
 
 
 
