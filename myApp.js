@@ -24,7 +24,8 @@ app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 // Add your DNS prefetching disablepolicy here
 app.use(helmet.dnsPrefetchControl());
 
-
+// Add your client Side Cache Disable Policy here
+app.use(helmet.noCache());
 
 
 
